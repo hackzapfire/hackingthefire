@@ -1,0 +1,24 @@
+<div class="container-list-ocorrencias">
+    <div class="alert alert-warning alert-dismissible" role="alert" ng-if="alerta">
+        <button ng-click="removerOcorrencia()" type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        Endereço não encontrado para ocorrencia
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Endereco</th>
+                <th>Status</th>
+                <th>Emergencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="oc in ocorrencias">
+                <td><button class="btn btn-primary" ng-click="selecionaOcorrencia(oc)">Selecionar Recurso</button></td>
+                <td>{{oc.endereco}}</td>
+                <td><span class="ocorrencia-status {{oc.status=='atendido'?'status-ok':''}}"></span></td>
+                <td>{{oc.chamadaEmergencia}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

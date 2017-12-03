@@ -1,0 +1,26 @@
+.painel-menu{
+  max-height: 50vh;
+  .panel-body {
+    overflow-y: auto;
+  }
+}
+.coluna-direito{
+  padding: 0;
+}
+.list-m1, .list-m2{
+  padding: 0;
+  list-style: none;
+  li{
+    background: #fbfbfb;
+    line-height: 40px;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    margin: 4px 0 4px 0;
+    word-wrap: break-word;
+    &:hover{
+      background: #efefef;
+      cursor: pointer;
+    }
+  }
+}

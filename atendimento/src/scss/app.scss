@@ -1,0 +1,13 @@
+.sug-container{
+  width: 210px;
+  height: 70vh;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  //background: rgba(0,0,0,.6);
+  //border-radius: 2px;
+  .panel-heading{
+    cursor: move;
+  }
+
+}

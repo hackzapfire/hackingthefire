@@ -1,0 +1,64 @@
+<div class="container">
+<div class="alert alert-danger alert-dismissible" role="alert" ng-if="alerta">
+    <button ng-click="removerOcorrencia()" type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>Atenção</strong> Algo de errado ocorreu ao despachar ocorrencia
+</div>
+<div class="alert alert-warning alert-dismissible" role="alert" ng-if="ocorrencia">
+    <button ng-click="removerOcorrencia()" type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>Atência!</strong> Você selecionou uma ocorrencia para despacho, clique em um recurso para encaminhar o atendimento
+</div>
+    <div class="row" style="height: 80vh;">
+        <div class="col-sm-3" style="background: #f3f7f0; height: 100%">
+            <div class="row">
+                <div class="col-sm-12 coluna-direito">
+                    <ul class="list-m1">
+                        <li ng-repeat="r in recursos" ng-click="zoomMap(r)">Carro {{$index}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 list-m2">
+                    <ul class="list-m1">
+                        <li ng-repeat="o in ocors" ng-click="zoomMap(o)" ng-if="o.latituda&&o.longitude">{{o.endereco}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div id="map" style="widht: 500px;height: 500px;">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="checksModal" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Selecionar ocorrencia para recurso</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Endereco</th>
+                        <th>Status</th>
+                        <th>Emergencia</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="oc in ocorrencias">
+                        <td><button class="btn btn-primary" ng-click="selecionaParaRecurso(oc)">Selecionar Recurso</button></td>
+                        <td>{{oc.endereco}}</td>
+                        <td>{{oc.status}}</td>
+                        <td>{{oc.chamadaEmergencia}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

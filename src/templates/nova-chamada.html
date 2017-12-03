@@ -1,0 +1,79 @@
+<div class="container-nova-chamada">
+    <h1 class="display-4">Nova chamada</h1>
+    <form class="chamada-form">
+        <div class="form-group">
+            <label for="nome">Solicitante(Nome)</label>
+            <input type="text" id="nome" class="form-control" ng-model="chamada.nome" placeholder="Nome do solicitante">
+        </div>
+        <div class="form-group">
+            <label for="nome">Telefone</label>
+            <input type="text" id="telefone" class="form-control" ng-model="chamada.telefone" placeholder="Telefone">
+        </div>
+        <div class="form-group">
+            <label for="nome">Município</label>
+            <input type="text" id="cidade" class="form-control" ng-model="chamada.cidade" placeholder="Cidade">
+        </div>
+        <div class="form-group">
+            <label for="nome">Endereço</label>
+            <input type="text" id="endereco" class="form-control" ng-model="chamada.endereco" placeholder="Endereço">
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <input type="number" id="numero" class="form-control" ng-model="chamada.numero" placeholder="Número">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <input type="text" id="referencia" class="form-control" ng-model="chamada.referencia" placeholder="Ponto de referencia">
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="nome">Bairro</label>
+            <input type="text" id="bairro" class="form-control" ng-model="chamada.bairro" placeholder="Bairro">
+        </div>
+        
+        <div class="form-group">
+            <label for="paciente_nome">Paciente(Nome)</label>
+            <input type="text" id="paciente_nome" class="form-control" ng-model="chamada.paciente_nome" placeholder="Nome do paciente">
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-6">
+                <label for="idade">Idade</label>
+                <input type="number" id="idade" class="form-control" ng-model="chamada.idade" placeholder="Idade do paciente">
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="ts">Sexo</label><br>
+                <label class="radio-inline" id="ts">
+                    <input type="radio" ng-model="chamada.sexo" value="M">Masculino
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" ng-model="chamada.sexo" value="F">Feminino
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="queixa">Queixa do paciente</label>
+            <textarea id="queixa" class="form-control" ng-model="chamada.queixa">
+            </textarea>
+        </div>
+        <div class="form-group">
+            <label for="obs">Observações</label>
+            <textarea id="obs" class="form-control" ng-model="chamada.observacoes">
+            </textarea>
+        </div>
+        <div class="form-group">
+            <label for="ts">Chamada de emergencia médica?</label><br>
+            <label class="radio-inline">
+                <input type="radio" ng-model="chamada.is_medica" value="1">Sim
+            </label>
+            <label class="radio-inline">
+                <input type="radio" ng-model="chamada.is_medica" value="0">Não
+            </label>
+        </div>
+        <button type="submit" ng-click="solicitacao(chamada)" class="btn btn-primary">Criar ocorrência</button>
+    </form>
+</div>

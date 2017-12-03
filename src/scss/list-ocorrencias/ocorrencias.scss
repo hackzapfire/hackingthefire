@@ -1,0 +1,15 @@
+.ocorrencia-desc-txt{
+  font-weight: bold;
+}
+
+.ocorrencia-status{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: block;
+  background: red;
+}
+
+.ocorrencia-status.status-ok{
+  background: #1AFF23;
+}

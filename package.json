@@ -1,0 +1,26 @@
+{
+  "name": "zap-fire-chamada",
+  "version": "1.0.0",
+  "description": "Applicação para gerenciamento de chamadas para bombeiros",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stenio",
+  "license": "ISC",
+  "devDependencies": {
+    "event-stream": "^3.3.4",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.7",
+    "angular-route": "^1.6.7",
+    "bootstrap": "^3.3.7",
+    "express": "^3.21.2",
+    "gmaps": "^0.4.24",
+    "jquery": "^3.2.1"
+  }
+}
